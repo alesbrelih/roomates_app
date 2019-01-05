@@ -10,3 +10,8 @@ services:
       - ../node:/usr/node
   redis:
     build: ./redis/
+  postgres:
+    build: ./postgres/
+    env_file: 
+      - postgres-env.env
+
