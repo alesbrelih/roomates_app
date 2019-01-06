@@ -4,4 +4,4 @@ WORKDIR /usr/node
 
 EXPOSE 8888
 
-CMD ["node", "server.js"]
+CMD ["npm", "start"]

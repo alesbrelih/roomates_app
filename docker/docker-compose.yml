@@ -2,12 +2,16 @@ version: '3'
 services:
   nginx:
     build: ./nginx/
+    restart: always
     ports:
       - "8080:80"
   node:
     build: ./node/
+    restart: always
     volumes: 
       - ../node:/usr/node
+    environment: 
+      - APPPORT:8888
   redis:
     build: ./redis/
   postgres:
